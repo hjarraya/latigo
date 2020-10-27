@@ -5,13 +5,12 @@
 #    pip-compile --output-file=requirements.txt r.in
 #
 absl-py==0.8.0            # via tensorboard, tensorflow
-adal==1.2.1
+adal==1.2.1               # via -r requirements.in, azure-datalake-store, msrestazure
 aiodns==2.0.0             # via gordo-components
 aiohttp==3.6.1            # via gordo-components
-alembic==1.2.1
+alembic==1.2.1            # via -r requirements.in
 aniso8601==8.0.0          # via flask-restplus
 apscheduler==3.6.1        # via gordo-components
-asn1crypto==1.0.0         # via cryptography
 astor==0.8.0              # via tensorflow
 async-timeout==3.0.1      # via aiohttp
 attrs==19.2.0             # via aiohttp, jsonschema
@@ -22,7 +21,7 @@ azure-cosmosdb-nspkg==2.0.2  # via azure-cosmosdb-table
 azure-cosmosdb-table==1.0.5  # via azure
 azure-datalake-store==0.0.47  # via azure, gordo-components
 azure-eventgrid==1.3.0    # via azure
-azure-eventhub==1.3.2
+azure-eventhub==1.3.2     # via -r requirements.in
 azure-graphrbac==0.40.0   # via azure
 azure-keyvault==1.1.0     # via azure
 azure-loganalytics==0.1.0  # via azure
@@ -97,17 +96,17 @@ azure-storage-blob==1.5.0  # via azure, azure-eventhub
 azure-storage-common==1.4.2  # via azure-cosmosdb-table, azure-storage-blob, azure-storage-file, azure-storage-queue
 azure-storage-file==1.4.0  # via azure
 azure-storage-queue==1.4.0  # via azure
-azure==4.0.0
+azure==4.0.0              # via -r requirements.in
 cachetools==3.1.1         # via google-auth, gordo-components
 cchardet==2.1.4           # via gordo-components
 certifi==2019.9.11        # via kubernetes, msrest, requests, uamqp
 cffi==1.12.3              # via azure-datalake-store, cryptography, pycares
 chardet==3.0.4            # via aiohttp, requests
 click==7.0                # via flask, gordo-components
-colorlog==4.0.2
-confluent-kafka==1.0.1
-cryptography==2.7         # via adal, azure-cosmosdb-table, azure-keyvault, azure-storage-common
-dataclasses-json==0.3.5
+colorlog==4.0.2           # via -r requirements.in
+confluent-kafka==1.0.1    # via -r requirements.in
+cryptography==3.2         # via adal, azure-cosmosdb-table, azure-keyvault, azure-storage-common
+dataclasses-json==0.3.5   # via -r requirements.in
 dictdiffer==0.8.0         # via gordo-components
 flask-restplus==0.13.0    # via gordo-components
 flask==1.1.1              # via flask-restplus, gordo-components
@@ -115,7 +114,7 @@ gast==0.2.2               # via tensorflow
 gevent==1.4.0             # via gordo-components
 google-auth==1.6.3        # via kubernetes
 google-pasta==0.1.7       # via tensorflow
-gordo-components==0.37.0
+gordo-components==0.37.0  # via -r requirements.in
 greenlet==0.4.15          # via gevent
 grpcio==1.24.1            # via tensorboard, tensorflow
 gunicorn==19.9.0          # via gordo-components
@@ -136,18 +135,18 @@ markupsafe==1.1.1         # via jinja2, mako
 marshmallow-enum==1.5.1   # via dataclasses-json
 marshmallow==3.2.1        # via dataclasses-json, marshmallow-enum
 msrest==0.6.10            # via azure-applicationinsights, azure-eventgrid, azure-keyvault, azure-loganalytics, azure-mgmt-cdn, azure-mgmt-compute, azure-mgmt-containerinstance, azure-mgmt-containerregistry, azure-mgmt-containerservice, azure-mgmt-dns, azure-mgmt-eventhub, azure-mgmt-keyvault, azure-mgmt-managementpartner, azure-mgmt-media, azure-mgmt-network, azure-mgmt-notificationhubs, azure-mgmt-rdbms, azure-mgmt-resource, azure-mgmt-search, azure-mgmt-servicebus, azure-mgmt-servicefabric, azure-mgmt-signalr, azure-servicefabric, msrestazure
-msrestazure==0.6.0
+msrestazure==0.6.0        # via -r requirements.in, azure-batch, azure-eventgrid, azure-eventhub, azure-graphrbac, azure-keyvault, azure-mgmt-advisor, azure-mgmt-applicationinsights, azure-mgmt-authorization, azure-mgmt-batch, azure-mgmt-batchai, azure-mgmt-billing, azure-mgmt-cdn, azure-mgmt-cognitiveservices, azure-mgmt-commerce, azure-mgmt-compute, azure-mgmt-consumption, azure-mgmt-containerinstance, azure-mgmt-containerregistry, azure-mgmt-containerservice, azure-mgmt-cosmosdb, azure-mgmt-datafactory, azure-mgmt-datalake-analytics, azure-mgmt-datalake-store, azure-mgmt-datamigration, azure-mgmt-devspaces, azure-mgmt-devtestlabs, azure-mgmt-dns, azure-mgmt-eventgrid, azure-mgmt-eventhub, azure-mgmt-hanaonazure, azure-mgmt-iotcentral, azure-mgmt-iothub, azure-mgmt-iothubprovisioningservices, azure-mgmt-keyvault, azure-mgmt-loganalytics, azure-mgmt-logic, azure-mgmt-machinelearningcompute, azure-mgmt-managementgroups, azure-mgmt-managementpartner, azure-mgmt-maps, azure-mgmt-marketplaceordering, azure-mgmt-media, azure-mgmt-monitor, azure-mgmt-msi, azure-mgmt-network, azure-mgmt-notificationhubs, azure-mgmt-policyinsights, azure-mgmt-powerbiembedded, azure-mgmt-rdbms, azure-mgmt-recoveryservices, azure-mgmt-recoveryservicesbackup, azure-mgmt-redis, azure-mgmt-relay, azure-mgmt-reservations, azure-mgmt-resource, azure-mgmt-scheduler, azure-mgmt-search, azure-mgmt-servicebus, azure-mgmt-servicefabric, azure-mgmt-signalr, azure-mgmt-sql, azure-mgmt-storage, azure-mgmt-subscription, azure-mgmt-trafficmanager, azure-mgmt-web
 multidict==4.5.2          # via aiohttp, yarl
 mypy-extensions==0.4.3    # via typing-inspect
 numexpr==2.7.0            # via gordo-components
-numpy==1.17.2
+numpy==1.17.2             # via -r requirements.in, gordo-components, h5py, keras-applications, keras-preprocessing, numexpr, opt-einsum, pandas, pyarrow, scikit-learn, scipy, tensorboard, tensorflow
 oauthlib==3.1.0           # via requests-oauthlib
 opt-einsum==3.1.0         # via tensorflow
-pandas==0.25.1
+pandas==0.25.1            # via -r requirements.in, gordo-components
 peewee==3.11.2            # via gordo-components
 protobuf==3.10.0          # via tensorboard, tensorflow
 psycopg2-binary==2.8.4    # via gordo-components
-psycopg2==2.8.3
+psycopg2==2.8.3           # via -r requirements.in
 pyarrow==0.15.0           # via gordo-components
 pyasn1-modules==0.2.6     # via google-auth
 pyasn1==0.4.7             # via pyasn1-modules, rsa
@@ -158,22 +157,22 @@ pyrsistent==0.15.4        # via jsonschema
 python-dateutil==2.8.0    # via adal, alembic, azure-cosmosdb-table, azure-storage-common, gordo-components, influxdb, kubernetes, pandas
 python-editor==1.0.4      # via alembic
 pytz==2019.2              # via apscheduler, flask-restplus, influxdb, pandas, tzlocal
-pyyaml==5.1.2
-requests-oauthlib==1.2.0
-requests==2.21.0
+pyyaml==5.1.2             # via -r requirements.in, gordo-components, kubernetes
+requests-oauthlib==1.2.0  # via -r requirements.in, kubernetes, msrest
+requests==2.21.0          # via -r requirements.in, adal, azure-cosmosdb-table, azure-datalake-store, azure-keyvault, azure-servicebus, azure-servicemanagement-legacy, azure-storage-common, gordo-components, influxdb, kubernetes, msrest, requests-oauthlib
 rsa==4.0                  # via google-auth
 scikit-learn==0.21.3      # via gordo-components
 scipy==1.3.1              # via scikit-learn
 simplejson==3.16.0        # via gordo-components
 six==1.12.0               # via absl-py, apscheduler, cryptography, flask-restplus, google-auth, grpcio, h5py, influxdb, isodate, jsonschema, keras-preprocessing, kubernetes, protobuf, pyarrow, pyrsistent, python-dateutil, tensorboard, tensorflow, uamqp, websocket-client
-sqlalchemy==1.3.8
+sqlalchemy==1.3.8         # via -r requirements.in, alembic
 stringcase==1.2.0         # via dataclasses-json
 tensorboard==2.0.0        # via tensorflow
 tensorflow-estimator==2.0.0  # via tensorflow
 tensorflow==2.0.0         # via gordo-components
 termcolor==1.1.0          # via tensorflow
 tqdm==4.36.1              # via gordo-components
-typing-extensions==3.7.4
+typing-extensions==3.7.4  # via -r requirements.in, typing-inspect
 typing-inspect==0.5.0     # via dataclasses-json
 tzlocal==2.0.0            # via apscheduler
 uamqp==1.1.0              # via azure-eventhub
@@ -185,4 +184,4 @@ wrapt==1.11.2             # via tensorflow
 yarl==1.3.0               # via aiohttp
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.5.1        # via apscheduler, jsonschema, kubernetes, markdown, protobuf, tensorboard
+# setuptools
